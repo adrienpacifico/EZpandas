@@ -115,6 +115,7 @@ AssertionError "int8" is a too small dtype
 #### assert merges if not the same dtypes
 Already implemented
 
+
 ```
 >>> df_1 = pd.DataFrame({"zipcode": [31859,32568,47852]})
 >>> df_2 = pd.DataFrame({"zipcode": ["31859","32568","47852"]})
@@ -123,6 +124,8 @@ Already implemented
 
 ValueError: You are trying to merge on int64 and object columns. If you wish to proceed you should use pd.concat
 
+
+check if works also with mixed dtypes ( [context here](If not implemented check https://towardsdatascience.com/data-cleaning-with-pandas-avoid-this-mistake-7af559657c2c) )
 
 
 
@@ -145,3 +148,46 @@ assert(df_12.applymap(type).A.nunique()==1)
 AssertionError: Operation that would induce a mixed Dtype. Please change Dtype of the column to "mixed", "list", "dict", or "string".
 
 ```
+
+### Logger for pipe function
+display the input ou output shape (or informations) of a df in a `pipe` function. 
+
+>>> df = df.pipe(dropna).pipe(remove_outliers).pipe(drop_duplicated_columns)
+dropna: removed 40 rows. (123459,12) --> (12319, 12)
+remove_outliers: removed 12 rows. (12319, 12) --> (12317, 12)
+drop_duplicated_columns: removed 2 columns. (12317, 12) --> (12317, 10)
+
+### Check pipe function
+Xamine the shape of a df in and out and assert if not good. 
+
+
+>>> df = df.pipex(dropna, max_row_loss=.1, n_cols=12)
+dropna: removed 40 rows. (123459,12) --> (12319, 12)
+
+
+remove_outliers: removed 12 rows. (12319, 12) --> (12317, 12)
+drop_duplicated_columns: removed 2 columns. (12317, 12) --> (12317, 10)
+
+
+
+shape = (123_000, 133)  shape to match exactly in output
+max_row_loss            max percentage of rows lost in the process (option with relative or absolute to deal ( e.g if a tupple is provided for max_row_loss
+
+
+#### Include index in the query namespace
+index_to_keep = df[filter].index
+df.query("index in @index_to_keep")
+
+
+
+#### Other related project:
+
+pyjanitor : dsmqfkdjqf
+datatest : https://github.com/shawnbrown/datatest/
+great_expectations : https://greatexpectations.io/
+
+
+
+
+
+
