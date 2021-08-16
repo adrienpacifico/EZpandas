@@ -178,11 +178,22 @@ max_row_loss            max percentage of rows lost in the process (option with 
 index_to_keep = df[filter].index
 df.query("index in @index_to_keep")
 
+#### Feather automatic reset_index
+
+```def to_feather_auto(df, path): 
+     df.reset_index().to_feather(path) ### write additional func if the index column already exists (e.g. index_save_feather)
+   return df
+pd.to_feather = to_feather_auto  ## or modify such that the to_feather is modified everywhere
+```
+
+```def read_feather(df, path): 
+     return pd.read_feather().set_index('index')     
+```
 
 
 #### Other related project:
 
-pyjanitor : dsmqfkdjqf
+pyjanitor : https://pyjanitor-devs.github.io/pyjanitor/
 datatest : https://github.com/shawnbrown/datatest/
 great_expectations : https://greatexpectations.io/
 
