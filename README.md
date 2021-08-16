@@ -189,7 +189,16 @@ pd.to_feather = to_feather_auto  ## or modify such that the to_feather is modifi
 ```def read_feather(df, path): 
      return pd.read_feather().set_index('index')     
 ```
-
+#### Selection of the options
+We could have a dictionary that set all features. 
+e.g.
+```
+{explicit_na : True,
+sugar_value_counts : True,
+human_readable_size : True
+}
+```
+It might be interesting to have a distinction between options that do not change pandas behavior (e.g. df.size(human_readable=True) does not change behavior if not used).
 
 #### Other related project:
 
