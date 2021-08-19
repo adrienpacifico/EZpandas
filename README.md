@@ -200,6 +200,14 @@ human_readable_size : True
 ```
 It might be interesting to have a distinction between options that do not change pandas behavior (e.g. df.size(human_readable=True) does not change behavior if not used).
 
+#### Allows .map({dict}) to keep values in Series that are not in the dictionary (as keys)
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html
+
+https://stackoverflow.com/questions/44159495/missing-data-using-pandas-map
+
+We can use replace instead.
+
+
 #### Other related project:
 
 pyjanitor : https://pyjanitor-devs.github.io/pyjanitor/
