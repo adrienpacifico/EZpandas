@@ -1,4 +1,4 @@
-# Easy pandas
+# EZpandas
 Sugary stuff for the pandas Python library
 
 ```python
