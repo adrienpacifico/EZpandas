@@ -131,8 +131,9 @@ check if works also with mixed dtypes ( [context here](If not implemented check 
 
 
 
-
-
+#### Info option for drop_duplicates
+>>> df.drop_duplicates(subset=["date", "id"], info=True)
+loggging INFO: 106 duplicates dropped, representing 1% of the rows.
 
 ### Immutable dtype per column
 
