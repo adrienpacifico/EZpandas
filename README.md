@@ -86,6 +86,10 @@ automatic suffxes taking the name of the dataframe in case two columns have the 
 >>>> df_a.merge(df_b, on="id")
 id| x_df_a | x_df_b|
 
+### Merge indicate to keep number of rows of first df
+
+df.merge(df2, same_len = True)
+implies that an assert len(df) == len(df.merge(df2, same_len = True)) est fait.
 
 # Dytypes
 Dtypes in pandas can be tricky
