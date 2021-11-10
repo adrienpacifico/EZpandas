@@ -81,6 +81,10 @@ dtype: int64
 df_1.shape == (4,7) Lmerge with df_2.shape == (7,8) resulted in a merge of shape
 (a,b)
 ```
+### Merge suffixes warnings/ name of the dataframe as suffixes
+automatic suffxes taking the name of the dataframe in case two columns have the same label
+>>>> df_a.merge(df_b, on="id")
+id| x_df_a | x_df_b|
 
 
 # Dytypes
