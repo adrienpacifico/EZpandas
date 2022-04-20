@@ -91,6 +91,10 @@ id| x_df_a | x_df_b|
 df.merge(df2, same_len = True)
 implies that an assert len(df) == len(df.merge(df2, same_len = True)) est fait.
 
+### Merge does not drop index on a merge 
+When merging two dataframes on a non index column, the index is dropped.
+In that cas implement a .reset_index() implicitely to keep the column at least if it has a name.
+
 # Dytypes
 Dtypes in pandas can be tricky
 
