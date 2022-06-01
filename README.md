@@ -223,6 +223,16 @@ https://stackoverflow.com/questions/44159495/missing-data-using-pandas-map
 We can use replace instead.
 
 
+### EZ descriptive statistics
+Describe data in a easy way with options.
+Add colors with styler
+1. A table with mean and std in parenthesis
+2. Ability to compare two (or more) groups, for instance train and test set, with statistics to define if groups are statistically differents (style red if true)
+3. Provide a good way to describe categorical variables
+4. Provide option for graphical representations.
+
+should be a lightweight and more practical version of pandas profiling.
+
 #### Other related project:
 
 pyjanitor : https://pyjanitor-devs.github.io/pyjanitor/
