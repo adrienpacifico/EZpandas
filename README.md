@@ -211,6 +211,16 @@ pd.to_feather = to_feather_auto  ## or modify such that the to_feather is modifi
 ```def read_feather(df, path): 
      return pd.read_feather().set_index('index')     
 ```
+#### EZ_to_feather
+- reset_index , drop index if it has no name, register it as EZ_index_feather_column_name if is has a name (e.g. from a groupby)
+- transform columns to string if a column is an int (or something else)
+- remove duplicates columns that has the same name if they are the same ; rename colum_name , column_name_x, column_name_y, etc if they are not the same.
+- Default option to test if the recorded feather can be read after recording it
+#### EZ_read_feather
+- read feather file, and set the index if there is a column named EZ_index_feather_name
+
+
+
 #### Selection of the options
 We could have a dictionary that set all features. 
 e.g.
