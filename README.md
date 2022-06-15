@@ -233,6 +233,10 @@ Add colors with styler
 
 should be a lightweight and more practical version of pandas profiling.
 
+### EZHarversine
+Provide two set of columns for latitude and longitude, and output the distance (in km or in miles).
+
+
 #### Other related project:
 
 pyjanitor : https://pyjanitor-devs.github.io/pyjanitor/
