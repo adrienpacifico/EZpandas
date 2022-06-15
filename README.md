@@ -164,6 +164,13 @@ AssertionError: Operation that would induce a mixed Dtype. Please change Dtype o
 
 ```
 
+#### EZDowncastDtype
+df.EZDowncastDtype("16") --> Transfor float64 to float 16, int64 to int16 if possible (possible if in the range of min max of a type)
+
+#### EZnumpyDtype
+Transfor pandas type (Int32, Float32 etc) to float if contains NA
+
+
 ### Logger for pipe function
 display the input ou output shape (or informations) of a df in a `pipe` function. 
 
