@@ -14,3 +14,8 @@ def ez_value_counts(s,dropna=False, ascending=False, bins=None):
     if bins:
         return df_.assign(bins=lambda x: x.index).assign(quantile= lambda x : np.array(range(len(x)))+1).set_index("quantile")
     return df_
+
+
+@pf.register_dataframe_method
+def ez_size(df):
+    """Get human readable size"""
