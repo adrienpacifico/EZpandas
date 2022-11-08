@@ -240,6 +240,8 @@ https://stackoverflow.com/questions/44159495/missing-data-using-pandas-map
 We can use replace instead.
 
 
+
+
 ### EZ descriptive statistics
 Describe data in a easy way with options.
 Add colors with styler
@@ -249,6 +251,11 @@ Add colors with styler
 4. Provide option for graphical representations.
 
 should be a lightweight and more practical version of pandas profiling.
+See: https://stackoverflow.com/questions/54466196/descriptive-statistics-in-python-with-pandas-with-std-in-parentheses
+
+#### EZ compare groups:
+Provide a way to compare two groups with appropriate statistical tests for difference in mean/distribution/etc.
+
 
 ### EZHarversine
 Provide two set of columns for latitude and longitude, and output the distance (in km or in miles).
