@@ -260,6 +260,9 @@ Provide a way to compare two groups with appropriate statistical tests for diffe
 ### EZHarversine
 Provide two set of columns for latitude and longitude, and output the distance (in km or in miles).
 
+### Show_nan
+`df.show_nan()` will plot missingno (bonus, include the interactive version with plotly).
+
 ### Put numpy in pandas
 
 `pd.np`, provide a king warning telling that it might be a bad practice. 
