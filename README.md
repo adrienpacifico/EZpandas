@@ -260,6 +260,10 @@ Provide a way to compare two groups with appropriate statistical tests for diffe
 ### EZHarversine
 Provide two set of columns for latitude and longitude, and output the distance (in km or in miles).
 
+### Put numpy in pandas
+
+`pd.np`, provide a king warning telling that it might be a bad practice. 
+
 
 #### Other related project:
 
