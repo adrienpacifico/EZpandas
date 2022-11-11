@@ -25,6 +25,17 @@ pd.value_counts(normalize="both")
 | 22   |      10 | 0.0197628 |  0.83     |
 
 
+
+## Value counts with limited number of modalities
+```python
+pd.value_counts(limit=3, normalize="both")
+```
+|        |   N_obs |     Share |  Cumulate |
+|-------:|--------:|----------:|----------:|
+|  0     |     372 | 0.735178  |  0.735178 |
+| 20     |      21 | 0.041502  |  0.776xxx |
+| others*|      35 | 0.124     |  1        |
+
 ## Human readable size
 
 ```
