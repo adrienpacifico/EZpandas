@@ -82,6 +82,12 @@ dtype: int64
 ### Add a na line after the Count line in df.describe()
 
 
+### Add a message indicating categorical values not taken into account when using `describe`
+(e.g.  Info: 7 columns not in the results, 3 categoricals, 2 strings, and 2 objects (give columns name if the number is low).
+
+### Add possible text information about a column (as when using `read_stata` ).
+`df.columns.column_info`
+
 ### Merge info
 ```
 >>> pd.merge(df_1,df_2, on = "zipcode")
