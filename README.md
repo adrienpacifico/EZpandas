@@ -282,7 +282,12 @@ Provide two set of columns for latitude and longitude, and output the distance (
 
 ### Put numpy in pandas
 
-`pd.np`, provide a king warning telling that it might be a bad practice. 
+`pd.np`, provide a kind warning telling that it might be a bad practice. 
+
+### Polars
+df.pl.merge(df2, on="key") would make the merge in polars seamlessly.
+
+Could be extended to other polars functions and UDF.
 
 
 #### Other related project:
