@@ -79,6 +79,13 @@ dtype: int64
 
 
 ```
+
+### Create easily example dataframe:
+
+`pd.DataFrame("titanic")` or `pd.DataFrame("abc")`
+(think of other way to create it)
+
+
 ### Add a na line after the Count line in df.describe()
 
 
