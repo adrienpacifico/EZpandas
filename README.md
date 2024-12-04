@@ -80,6 +80,25 @@ dtype: int64
 
 ```
 
+### df.rename errors default to raise instead of ignore.
+(potentially, put a errors="columns_only" by default to ignore labels on 'index').
+
+```python
+>>> df.rename(columns={"A": "a", "B": "b", "C": "c"}, errors="raise")
+Traceback (most recent call last):
+KeyError: ['C'] not found in axis
+
+Using axis-style parameters:
+
+>>> df.rename(columns={"A": "a", "B": "b", "C": "c"}) # default value is now raise
+Traceback (most recent call last):
+KeyError: ['C'] not found in axis
+
+Using axis-style parameters:
+
+```
+
+
 ### Create easily example dataframe:
 
 `pd.DataFrame("titanic")` or `pd.DataFrame("abc")`
