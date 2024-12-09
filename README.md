@@ -318,9 +318,11 @@ Could be extended to other polars functions and UDF.
 
 #### Other related project:
 
-pyjanitor : https://pyjanitor-devs.github.io/pyjanitor/
-datatest : https://github.com/shawnbrown/datatest/
-great_expectations : https://greatexpectations.io/
+pyjanitor: https://pyjanitor-devs.github.io/pyjanitor/  
+datatest: https://github.com/shawnbrown/datatest/  
+great_expectations: https://greatexpectations.io/ 
+pandera: https://github.com/unionai-oss/pandera
+sidetable: https://github.com/chris1610/sidetable
 
 
 
